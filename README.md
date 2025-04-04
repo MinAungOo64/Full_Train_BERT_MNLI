@@ -66,3 +66,15 @@ raw_datasets = load_dataset("glue", "mnli")
 eval_results = {'accuracy': 0.8310683564920853}
 ```
 This result was achieved by combining both validation_matched and validation_mismatched datasets, which provides a more generalized view of model performance across both in-domain and out-of-domain examples.
+
+## 🧪 Purpose of the Test Notebook
+
+The **Test notebook** is used to evaluate the model on the **test_matched** and **test_mismatched** datasets from the **MNLI** dataset. These datasets do not contain ground truth labels, so the notebook generates predictions to be submitted to the **GLUE leaderboard**.
+
+### Key Points:
+1. **Model Evaluation**: Generates predictions for the test datasets (matched and mismatched) to assess the model's performance.
+2. **Leaderboard Submission**: Predictions are submitted to the **GLUE leaderboard**, where they are compared against hidden ground truth labels.
+3. **No Direct Label Comparison**: Since the test datasets have no labels, this step is for final evaluation only.
+4. **Metrics**: The leaderboard ranks models based on accuracy and other metrics after submission.
+
+In summary, the test notebook is for generating predictions on the test set and submitting them to the GLUE leaderboard for official evaluation.
