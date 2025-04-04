@@ -7,9 +7,9 @@ The Multi-Genre Natural Language Inference (MNLI) dataset is part of the GLUE Be
 ## 📘 Task Definition
 The task is to determine the semantic relationship between a premise and a hypothesis sentence. Each example is labeled as one of the following:
 
-entailment (0): The hypothesis logically follows from the premise.  
-neutral (1): The hypothesis might be true, but is not guaranteed.  
-contradiction (2): The hypothesis contradicts the premise.  
+**entailment (0)**: The hypothesis logically follows from the premise.  
+**neutral (1**): The hypothesis might be true, but is not guaranteed.  
+**contradiction (2)**: The hypothesis contradicts the premise.  
 
 | Premise                                           | Hypothesis                                      | Label         |
 |--------------------------------------------------|-------------------------------------------------|---------------|
@@ -29,15 +29,15 @@ The MNLI dataset contains examples drawn from a wide range of genres to test gen
 | test_mismatched      | Test data from new genres (for leaderboard use)    | ❌ No (labels = -1) |
 
 ### ✅ Matched vs Mismatched:  
-Matched = in-domain (same genre as training)  
-Mismatched = out-of-domain (unseen genres, testing robustness)
+**Matched** = in-domain (same genre as training)  
+**Mismatched** = out-of-domain (unseen genres, testing robustness)
 
 ## 📦 Features
-premise (string): The original sentence.  
-hypothesis (string): Sentence to compare against the premise.  
-label (int): 0 = entailment, 1 = neutral, 2 = contradiction.  
-genre (string): Source genre (e.g., fiction, government).  
-idx (int): Unique index of the example.  
+**premise** *(string)*: The original sentence.  
+**hypothesis** *(string)*: Sentence to compare against the premise.  
+**label** *(int)*: 0 = entailment, 1 = neutral, 2 = contradiction.  
+**genre** *(string)*: Source genre (e.g., fiction, government).  
+**idx** *(int)*: Unique index of the example.
 
 ## 🔗 Resources
 Official GLUE page: https://gluebenchmark.com/tasks
