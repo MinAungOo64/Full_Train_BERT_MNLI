@@ -49,3 +49,20 @@ from datasets import load_dataset
 # Load the MNLI dataset
 raw_datasets = load_dataset("glue", "mnli")
 ```
+## ⚡ Training and Evaluation
+
+### Model:
+- Pretrained model: `bert-base-uncased`
+- Task: Sequence Classification (MNLI)
+- Framework: Hugging Face Transformers
+
+### Evaluation Setup:
+- Combined the **matched** and **mismatched** evaluation datasets for a more comprehensive evaluation.
+
+### Results:
+- **Accuracy on evaluation data**: **83.11%** (combined matched and mismatched evaluation datasets)
+
+```python
+eval_results = {'accuracy': 0.8310683564920853}
+```
+This result was achieved by combining both validation_matched and validation_mismatched datasets, which provides a more generalized view of model performance across both in-domain and out-of-domain examples.
